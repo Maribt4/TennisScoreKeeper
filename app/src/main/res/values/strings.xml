@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tennis Score Keeper</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+    <string name="set_1">Set 1</string>
+    <string name="set_2">Set 2</string>
+    <string name="set_3">Set 3</string>
+    <string name="tie">Tie Break</string>
+    <string name="tie_player1">Player 1 wins Tie Break!</string>
+    <string name="tie_player2">Player 2 wins Tie Break!</string>
+    <string name="score">Score</string>
+    <string name="reset">Reset</string>
+</resources>
