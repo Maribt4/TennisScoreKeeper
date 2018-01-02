@@ -8,7 +8,8 @@
     tools:context="com.example.android.tennisscorekeeper.MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="#F0F4C3" >
 
 
 <RelativeLayout
