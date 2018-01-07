@@ -21,27 +21,49 @@ public class MainActivity extends AppCompatActivity {
     int tieBreakPlayer1 = 0;
     int tieBreakPlayer2 = 0;
 
+    private TextView gameScorePlayer1View;
+    private TextView gameScorePlayer2View;
+    private TextView set1ScorePlayer1View;
+    private TextView set1ScorePlayer2View;
+    private TextView set2ScorePlayer1View;
+    private TextView set2ScorePlayer2View;
+    private TextView set3ScorePlayer1View;
+    private TextView set3ScorePlayer2View;
+    private TextView tieScorePlayer1View;
+    private TextView tieScorePlayer2View;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        gameScorePlayer1View = (TextView) findViewById(R.id.game_score_player1);
+        gameScorePlayer2View = (TextView) findViewById(R.id.game_score_player2);
+        set1ScorePlayer1View = (TextView) findViewById(R.id.set1_player1);
+        set1ScorePlayer2View = (TextView) findViewById(R.id.set1_player2);
+        set2ScorePlayer1View = (TextView) findViewById(R.id.set2_player1);
+        set2ScorePlayer2View = (TextView) findViewById(R.id.set2_player2);
+        set3ScorePlayer1View = (TextView) findViewById(R.id.set3_player1);
+        set3ScorePlayer2View = (TextView) findViewById(R.id.set3_player2);
+        tieScorePlayer1View = (TextView) findViewById(R.id.game_score_player1);
+        tieScorePlayer2View = (TextView) findViewById(R.id.game_score_player2);
     }
 
     /**
      * Displays the given score for Player 1.
      */
     public void displayForPlayer1(String scorePlayer1) {
-        TextView scoreView = (TextView) findViewById(R.id.game_score_player1);
+        TextView scoreView = gameScorePlayer1View;
         scoreView.setText(String.valueOf(scorePlayer1));
     }
 
     public void displayTieBreakPlayer1(int tieBreakPlayer1) {
-        TextView scoreView = (TextView) findViewById(R.id.game_score_player1);
+        TextView scoreView = tieScorePlayer1View;
         scoreView.setText(String.valueOf(tieBreakPlayer1));
     }
 
     public void displaySet3ForPlayer1(int set3Player1) {
-        TextView scoreView = (TextView) findViewById(R.id.set3_player1);
+        TextView scoreView = set3ScorePlayer1View;
         scoreView.setText(String.valueOf(set3Player1));
     }
 
@@ -103,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
         }
         displayForPlayer2(scorePlayer2);
         displayForPlayer1(scorePlayer1);
+            //scoreView;
         displaySetForPlayer1(setPlayer1);
        if (setPlayer1 == 6 && setPlayer2 ==6){
             Context context = getApplicationContext();
@@ -243,17 +266,17 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void displaySet2ForPlayer1(int set2Player1) {
-        TextView scoreView = (TextView) findViewById(R.id.set2_player1);
+        TextView scoreView = set2ScorePlayer1View;
         scoreView.setText(String.valueOf(set2Player1));
     }
 
     public void displaySetForPlayer1(int setPlayer1) {
-        TextView scoreView = (TextView) findViewById(R.id.set1_player1);
+        TextView scoreView = set1ScorePlayer1View;
         scoreView.setText(String.valueOf(setPlayer1));
     }
 
     public void displayTieBreakPlayer2(int tieBreakPlayer2) {
-        TextView scoreView = (TextView) findViewById(R.id.game_score_player2);
+        TextView scoreView = tieScorePlayer2View;
         scoreView.setText(String.valueOf(tieBreakPlayer2));
     }
 
@@ -354,7 +377,6 @@ public class MainActivity extends AppCompatActivity {
                 switch (scorePlayer2) { //*** Game Score
                     case "0":
                         scorePlayer2 = "15";
-
                         break;
                     case "15":
                         scorePlayer2 = "30";
@@ -465,22 +487,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void displayForPlayer2(String scorePlayer2) {
         //TextView scoreView = (TextView) findViewById(R.id.game_score_player2);
-        TextView scoreView = (TextView) findViewById(R.id.game_score_player2);
+        TextView scoreView = gameScorePlayer2View;
         scoreView.setText(String.valueOf(scorePlayer2));
     }
 
     public void displaySetForPlayer2(int setPlayer2) {
-        TextView scoreView = (TextView) findViewById(R.id.set1_player2);
+        TextView scoreView = set1ScorePlayer2View;
         scoreView.setText(String.valueOf(setPlayer2));
     }
 
     public void displaySet2ForPlayer2(int set2Player2) {
-        TextView scoreView = (TextView) findViewById(R.id.set2_player2);
+        TextView scoreView = set2ScorePlayer2View;
         scoreView.setText(String.valueOf(set2Player2));
     }
 
     public void displaySet3ForPlayer2(int set3Player2) {
-        TextView scoreView = (TextView) findViewById(R.id.set3_player2);
+        TextView scoreView = set3ScorePlayer2View;
         scoreView.setText(String.valueOf(set3Player2));
     }
 
@@ -489,8 +511,8 @@ public class MainActivity extends AppCompatActivity {
      * Reset Button
      */
     public void resetAll (View view){
-        String scorePlayer1 = "0";
-        String scorePlayer2 = "0";
+        scorePlayer1 = "0";
+        scorePlayer2 = "0";
         setPlayer1 = 0;
         setPlayer2 = 0;
         set2Player1= 0;
