@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E8F5E9"
     android:fillViewport="true"
     tools:context="com.example.android.tennisscorekeeper.MainActivity">
-
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -68,7 +63,6 @@
                     android:textSize="56sp" />
             </LinearLayout>
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -102,7 +96,6 @@
 
             </LinearLayout>
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -134,9 +127,7 @@
                     android:textAlignment="center"
                     android:textSize="36sp" />
 
-
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -201,12 +192,8 @@
                     android:textAlignment="center"
                     android:textSize="36sp" />
 
-
             </LinearLayout>
-
-
         </LinearLayout>
-
 
         <Button
             android:layout_width="wrap_content"
@@ -217,7 +204,6 @@
             android:onClick="resetAll"
             android:text="@string/reset"
             android:textColor="#FFFFFF" />
-
 
     </RelativeLayout>
 
